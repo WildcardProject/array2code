@@ -1,0 +1,20 @@
+{
+    "name": "programming_cat/array2code",
+    "description": "配列をソースコードの形の文字列に変換するパッケージです",
+    "type": "library",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "programming cat",
+            "email": "takanori@yamazaki.tech"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ProgrammingCat\\Array2Code\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.0"
+    }
+}

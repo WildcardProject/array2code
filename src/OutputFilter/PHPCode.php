@@ -16,11 +16,12 @@ class PHPCode {
     public function output($data) :string {
         if (empty($data) || !$this->is_array($data)) return self::EMPTY_DEF;
         // 配列をコードに。
-        $src = "";
+        $src = "[";
         foreach ($data as $key=>$val) {
-            $src .= sprintf('$%s = %s;', $key, $this->_convert_value($val, 0));
-            $src .= "\n";
+            $src .= sprintf('%s => %s,', $this->_convert_key($key), $this->_convert_value($val, 0));
+            $src .= PHP_EOL;
         }
+        $src .= "];";
         return $src;
     }
     protected function _convert_key($key) {

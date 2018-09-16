@@ -14,7 +14,7 @@ class PHPCode {
         return "PHPソースコード";
     }
     public function output($data) :string {
-        if (empty($data) || !$this->is_array($data)) return NULL;
+        if (empty($data) || !$this->is_array($data)) return self::EMPTY_DEF;
         // 配列をコードに。
         $src = "";
         foreach ($data as $key=>$val) {

@@ -16,5 +16,16 @@
     },
     "require": {
         "php": "^7.0"
-    }
+    },
+    "extra": {
+        "laravel": {
+          "providers": [
+            "ProgrammingCat\\Array2Code\\Array2CodeServiceProvider"
+          ],
+          "aliases": {
+            "Youtube": "ProgrammingCat\\Array2Code\\Facades\\Array2Code"
+          }
+        }
+      }
+    
 }
